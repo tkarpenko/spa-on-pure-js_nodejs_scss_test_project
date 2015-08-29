@@ -1,11 +1,11 @@
 # customers
 
-### Description:
+### Description
 
-Test Single Page Application (SPA) that allows to manage customers' data: to create new customer, update and delete info of existing customer and list all customers.
+Test Single Page Application (SPA) that allows to manage customers' data: to create the new customer, update and delete info of existing customer and to list the all customers
 
 The front-end of SPA implements MVC, Module and Mediator design patterns.
-The back-end implemented with Node.js.
+The back-end is implemented with Node.js.
 SPA uses JSON file as the storage mechanism for each customer record.
 
 ### Steps to fire up the project localy:

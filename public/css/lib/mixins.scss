@@ -1,0 +1,32 @@
+@mixin font ($color: $grey, $size: 12px, $align: left, $line_height: inherit, $weight: 400) {
+    color: $color;
+    font-size: $size;
+    text-align: $align;
+    line-height: $line_height;
+    font-weight: $weight;
+}
+@mixin ellipsis {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  width: 100%;
+}
+@mixin transition ($val) {
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -ms-transition: $val;
+  -o-transition: $val;
+  transition: $val;
+}
+@mixin transform ($val) {
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -o-transform: $val;
+  -ms-transform: $val;
+  transform: $val;
+}

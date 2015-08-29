@@ -1,0 +1,143 @@
+.tt_sidebar {
+  width: 180px;
+  max-height: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  @include transition(max-height 0.01s 0.3s linear);
+  * {
+    text-transform: uppercase;
+  }
+  .toogle {
+    font-family: "PT Sans Caption", Arial;
+    color: rgba(0,0,0,0.2);
+    font-size: 18px;
+    font-weight: 700;
+    background: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    .title {
+      line-height: 102px;
+      padding: 0 13px 0 40px;
+      display: inline-block;
+      vertical-align: middle;
+      &:before {
+        color: #fff;
+        content: attr(data-hover);
+        position: absolute;
+        opacity: 1;
+      }
+    }
+    .fa {
+      font-size: 20px;
+      top: 3px;
+      position: relative;
+      color: #fff;
+    }
+    .title:before,
+    .fa {
+      @include transition (all 0.3s linear);
+    }
+
+    &:hover {
+      text-decoration: none;
+      .title:before,
+      .fa {
+        @include transform (scale(0.9));
+      }
+      .title:before {
+        opacity: 0;
+      }
+      .fa {
+        color: rgba(0,0,0,0.2);
+      }
+    }
+  }
+  .menu {
+    list-style: none;
+    background-color: rgba(88,86,86, 0.8);
+    width: 180px;
+    margin: 0;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    right: -100%;
+    z-index: 2;
+    @include transition(right 0.3s 0.01s linear);
+    li a {
+      display: block;
+      height: 50px;
+      width: 100%;
+      padding-left: 40px;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+
+      font-family: "PT Sans Caption", Arial;
+      @include font(rgba(0,0,0,0.2), 18px, left, 50px);
+      
+      &:before {
+        color: #fff;
+        content: attr(data-hover);
+        position: absolute;
+        opacity: 1;
+        @include transition (all 0.3s linear);
+      }
+      &:hover {
+        text-decoration: none;
+        &:before {
+          @include transform (scale(0.9));
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &.fixed .menu {
+    position: fixed;
+    top: 0;
+  }
+  &.sidebar_open {
+    max-height: 100%;
+    @include transition(max-height 0.01s linear);
+    .menu {
+      right: 0;
+    }
+  }
+}
+
+.tt_bottom_menu {
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 13px;
+  text-align: center;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px;
+    a {
+      display: block;
+      padding: 0 20px;
+      font-family: "PT Sans", Arial;
+      @include font(rgba(0,0,0,0.2), 18px, center, 80px, 700);
+      text-transform: uppercase;
+      &:before {
+        color: #58595b;
+        content: attr(data-hover);
+        position: absolute;
+        opacity: 1;
+        @include transition (all 0.3s linear);
+      }
+      &:hover {
+        text-decoration: none;
+        &:before {
+          @include transform (scale(0.9));
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

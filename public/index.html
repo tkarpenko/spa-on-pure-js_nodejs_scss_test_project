@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html len="en">
+<head>
+  <title>Test Single Page Application</title>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta name="description" content="Single Page App for management the info about customers."/>
+  <meta name="keyword" content="Single, Page, App, management, customers, Single Page App, management customers" />
+  
+  <!-- Google fonts PTSans and PTSansCaption -->
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <!-- Bootstrap stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- App stylesheets -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- App javascripts -->
+  <script src="js/jquery.min.js"></script>
+</head>
+
+<!-- "tt_" prefix in name of css-classes means "Test Task" -->
+
+<body>
+
+  <div class="tt_layout">
+
+    <!-- Container start -->
+    <div class="tt_container">
+
+      <header>
+        <a href="#" title="List" class="tt_logo">Customers</a>
+      </header>
+
+      <!-- Navigation start -->
+      <div class="tt_sidebar" id="tt-sidebar">
+        <button type="button" class="toogle" id="tt-sidebar-toggle">
+          <span class="title" data-hover="Menu">Menu</span>
+          <i class="fa glyphicon glyphicon-menu-hamburger"></i>
+        </button>
+        <ul class="menu">
+          <li><a href="#" data-hover="List">List</a></li>
+          <li><a href="#/create" data-hover="Create">Create</a></li>
+        </ul>
+      </div>
+      <!-- Navigation end -->
+
+      <!-- View start -->
+      <div class="tt_content" id="tt-view"></div>
+      <!-- View end -->
+
+    </div>
+    <!-- Container end -->
+
+    <!-- Footer start -->
+    <footer>
+      <ul class="tt_bottom_menu">
+        <li><a href="#" data-hover="List">List</a></li>
+        <li><a href="#/create" data-hover="Create">Create</a></li>
+      </ul>
+    </footer>
+    <!-- Footer end -->
+  </div>
+  <script src="js/app.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/delete.js"></script>
+  <script src="js/list.js"></script>
+  <script src="js/update.js"></script>
+  <script src="js/create.js"></script>
+  <script src="js/routes.js"></script>
+</body>
+</html>

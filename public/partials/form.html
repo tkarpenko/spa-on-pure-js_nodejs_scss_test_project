@@ -1,0 +1,74 @@
+<h2 class="tt_title"><span></span></h2>
+<form name="customerInfo" id="info" class="tt_form">
+  <legend>Personal data</legend>
+  <div class="fieldset">
+    <div class="errors">
+      <p class="validName"><i class="glyphicon glyphicon-exclamation-sign"></i>Only cyrillic and latin letters are allowed</p>
+      <p class="required"><i class="glyphicon glyphicon-exclamation-sign"></i>Required field</p>
+      <p class="minLength"><i class="glyphicon glyphicon-exclamation-sign"></i>Too short</p>
+      <p class="maxLength"><i class="glyphicon glyphicon-exclamation-sign"></i>Too long</p>
+    </div>
+    <input type="text" value="" name="name" placeholder="Full name" class="form-control"/>
+    <div class="tt_tooltip">Customer's name can contain only latin letters and consist at least of two words.</div>
+  </div>
+  <div class="fieldset">
+    <div class="errors">
+      <p class="validEmail"><i class="glyphicon glyphicon-exclamation-sign"></i>Not valid. Please, input email in format "email@box.my"</p>
+      <p class="required"><i class="glyphicon glyphicon-exclamation-sign"></i>Required field</p>
+    </div>
+    <input type="email" value="" name="email" placeholder="Email" class="form-control"/>
+    <div class="tt_tooltip">Customer's email can have format "email@box.my".</div>
+  </div>
+  <div class="fieldset">
+    <div class="errors">
+      <p class="validTelehone"><i class="glyphicon glyphicon-exclamation-sign"></i>Not valid. Please, input number in format "+*..* (*..*) **..***"</p>
+      <p class="maxLength"><i class="glyphicon glyphicon-exclamation-sign"></i>Too long</p>
+    </div>
+    <input type="text" value="" name="telephone" placeholder="Telephone" class="form-control"/>
+    <div class="tt_tooltip">Please, input phone number in format: "+[country code] ([area code]) [subscriber's number]".</div>
+  </div>
+  <legend>Adress</legend>
+  <div class="fieldset">
+    <div class="errors">
+      <p class="required"><i class="glyphicon glyphicon-exclamation-sign"></i>Required field</p>
+    </div>
+    <select name="address[state]" class="form-control">
+      <option value=''>State</option>
+      <option value='Ukraine'>Ukraine</option>
+      <option value='Canada'>Canada</option>
+    </select>
+    <div class="tt_tooltip">Please, select the country where customer is living.</div>
+  </div>
+  <div class="fieldset">
+    <select name="address[city]" class="form-control">
+      <option value=''>City</option>
+      <option value='Kyiv'>Kyiv</option>
+      <option value='Toronto'>Toronto</option>
+      <option value='Cherkassy'>Cherkassy</option>
+    </select>
+    <div class="tt_tooltip">Please, select the city where customer is living.</div>
+  </div>
+  <div class="fieldset">
+    <div class="errors">
+      <p class="validStreet"><i class="glyphicon glyphicon-exclamation-sign"></i>Forbidden symbol was inputted</p>
+      <p class="required"><i class="glyphicon glyphicon-exclamation-sign"></i>Required field</p>
+    </div>
+    <input type="text" value="" name="address[street]" placeholder="Street" class="form-control"/>
+    <div class="tt_tooltip">What is the customer's street.</div>
+  </div>
+  <div class="fieldset">
+    <div class="errors">
+      <p class="validZip"><i class="glyphicon glyphicon-exclamation-sign"></i>Not valid. Please, input 5 digits.</p>
+      <p class="required"><i class="glyphicon glyphicon-exclamation-sign"></i>Required field</p>
+      <p class="minLength"><i class="glyphicon glyphicon-exclamation-sign"></i>Too short</p>
+    </div>
+    <input type="text" value="" name="address[zip]" placeholder="Zip" class="form-control"/>
+    <div class="tt_tooltip">What is the customer's zip code? Please, input it in next format: "*****"</div>
+    
+  </div>
+  <div class="fieldset enable">
+    <button type="submit" name="submitButton" class="tt_button pull-right" data-hover=""></button>
+    <a href="#/" class="tt_button pull-right" data-hover="Cancel">Cancel</a>
+    <div class="tt_tooltip tooltip_show">Please, fill form with valid data.</div>
+  </div>
+</form>

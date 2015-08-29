@@ -1,0 +1,144 @@
+.tt_list {
+  width: 100%;
+  .titles {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #d8d7cd;
+    th div {
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  tr {
+    cursor: default;
+    height: 50px;
+    overflow: hidden;
+    display: block;
+    letter-spacing: -4px;
+  }
+  th,
+  td {
+    padding: 0 5px;
+    width: 20%;
+    letter-spacing: 0;
+    line-height: 0;
+    font-size: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  td div, 
+  th div {
+    height: 50px;
+    opacity: 1;
+    @include ellipsis;
+    &:after {
+      content: '';
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+    }
+  }
+  td {
+    color: #7c7e81; 
+    div {
+      font-size: 15px;
+      line-height: 50px;
+    }   
+    button,
+    a {
+      display: none;
+      vertical-align: middle;
+      background-color: #ebebeb;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      @include transition(background-color 0.3s linear);
+      font-size: 12px;
+      text-align: center;
+      line-height: 30px;
+      margin-right: 10px;
+      i {
+        color: #333;
+        position: relative;
+        @include transition (all 0.3s linear);
+      }
+      &:hover {
+        background-color: #333; //#d9363c;
+        @include transition(background-color 0.3s linear);
+        i {
+          color: #fff;
+          @include transition(color 0.3s linear);
+        }
+      }
+      &:active {
+        text-decoration: none;
+        i {
+          color: #7d1e1f;
+          @include transform (scale(0.9));
+        }
+      }
+    }
+    &[colspan] {
+      width: 100%;
+    }
+  }
+  tr.remove,
+  tr:hover {
+    background-color: #ebebeb;
+    td {
+      color: #333;
+      button,
+      a {
+        display: inline-block;
+      }
+    } 
+  }
+  tr.remove {
+    height: 0;
+    opacity: 0;
+    @include transition(all 0.5s linear);
+  }
+}
+
+@media (max-width: 700px) {
+  .tt_list {
+    display: block;
+    thead {
+      display: none;
+    }
+    tbody {
+      display: block;
+    }
+  }
+  .tt_list tr {
+    display: block;
+    position: relative;
+    height: 93px;
+    margin-bottom: 10px;
+  }
+  .tt_list td {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+  .tt_list td div {
+    padding: 0;
+    height: auto;
+    line-height: 22px;
+    width: 80%;
+  }
+  .tt_list td button, 
+  .tt_list td a {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  .tt_list td button {
+    right: 50px;
+  }
+}

@@ -16,13 +16,18 @@ Install Node.js
 
 ##### 2. Clone project
 Open console and go to the folder where you want to save Open Gallery project and run
-```$ git clone https://github.com/tkarpenko/smartforms.git ```
+```$ git clone https://github.com/tkarpenko/spa-on-pure-js_nodejs_scss_test_project.git ```
 
-##### 2. Launch SPA 
+##### 3. Install npm packages
 ```
-$ cd smartforms
+$ npm i
+```
+
+##### 4. Launch SPA 
+```
+$ cd spa-on-pure-js_nodejs_scss_test_project
 $ node server.js
 ```
 
-##### 3. Take a look:
+##### 5. Take a look:
 Open browser tab with [http://localhost:3000/](http://localhost:3000/).

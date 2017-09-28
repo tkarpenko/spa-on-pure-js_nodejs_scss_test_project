@@ -1,0 +1,10 @@
+{
+  "name": "SmartForms",
+  "version": "0.0.0",
+  "main": "serverjs/serverj.js",
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "jsonfile": "^4.0.0"
+  }
+}

@@ -20,12 +20,12 @@ Open console and go to the folder where you want to save Open Gallery project an
 
 ##### 3. Install npm packages
 ```
+$ cd spa-on-pure-js_nodejs_scss_test_project
 $ npm i
 ```
 
 ##### 4. Launch SPA 
 ```
-$ cd spa-on-pure-js_nodejs_scss_test_project
 $ node server.js
 ```
 
